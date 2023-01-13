@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <!-- REPLY VARIATIONS -->
+	<category>
+		<pattern>AFFIRMATION</pattern>
+		<template>
+			<random>
+				<li>Ok</li>
+				<li>Perfect</li>
+				<li>Alright</li>
+			</random>
+		</template>
+	</category>
+	
+	<!-- SYNONYMS -->
+	<category>
+	    <pattern>_ INCOME *</pattern>
+	    <template><srai><star/> SALARY <star index="2"/></srai></template>
+	</category>
+	
+	<category>
+	    <pattern>_ TWIXT _</pattern>
+	    <template><srai><star index="1"/> BETWEEN <star index="2"/></srai></template>
+	</category>
+	
+	<!-- SYNONYMS: GREETINGS AND GOODBYES -->
+	<category>
+        <pattern>^ HELLO ^</pattern>
+        <template><srai>GREETING</srai></template>
+    </category>
+	    
+    <category>
+        <pattern>^ HI ^</pattern>
+        <template><srai>GREETING</srai></template>
+    </category>
+	    
+    <category>
+        <pattern>^ HEY ^</pattern>
+        <template><srai>GREETING</srai></template>
+    </category>
+	    
+    <category>
+        <pattern>^ HOWDY ^</pattern>
+        <template><srai>GREETING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ SUP ^</pattern>
+        <template><srai>GREETING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ GREETINGS ^</pattern>
+        <template><srai>GREETING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>BYE</pattern>
+        <template><srai>GOODBYE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>CIAO ^</pattern>
+        <template><srai>GOODBYE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>SEE YOU LATER ALLIGATOR</pattern>
+        <template>In a while, crocodile! Thank you for chatting</template>
+    </category>
+    
+    <!-- SYNONYMS: AFFIRMATIONS AND NEGATIONS ('YES' AND 'NO') -->
+    <category>
+        <pattern>^ YEP ^</pattern>
+        <template><srai><star/> YES <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ YEAH ^</pattern>
+        <template><srai><star/> YES <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>PLEASE</pattern>
+        <template><srai>YES</srai></template>
+    </category>
+    
+    <category>
+        <pattern>SURE</pattern>
+        <template><srai>YES</srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ NOPE ^</pattern>
+        <template><srai><star/> NO <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ NAH ^</pattern>
+        <template><srai><star/> NO <star index="2"/></srai></template>
+    </category>
+    
+    <!-- SYNONYMS: CAREERS -->
+    <category>
+        <pattern>_ VIDEO GAME DEVELOPER *</pattern>
+        <template><srai><star index="1"/> VIDEO GAME DESIGNER <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ VIDEO GAME ENGINEER *</pattern>
+        <template><srai><star index="1"/> VIDEO GAME DESIGNER <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ HARD WARE *</pattern>
+        <template><srai><star index="1"/> HARDWARE <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ INFORMATION TECHNOLOGIES *</pattern>
+        <template><srai><star index="1"/> IT <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ INFORMATION TECHNOLOGY *</pattern>
+        <template><srai><star index="1"/> IT <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ SOFTWARE DESIGNER *</pattern>
+        <template><srai><star index="1"/> SOFTWARE ENGINEER <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ SOFTWARE DEVOLOPER *</pattern>
+        <template><srai><star index="1"/> SOFTWARE ENGINEER <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ PROGRAMMER *</pattern>
+        <template><srai><star index="1"/> SOFTWARE ENGINEER <star index="2"/></srai></template>
+    </category>
+	
+	<!-- PLURALS -->
+	<!--<category>
+	    <pattern>_ DIFFERENCES ^</pattern>
+	    <template><srai><star/> DIFFERENCE <star index="2"/></srai></template>
+	</category>
+	
+	<category>
+	    <pattern>_ SKILLS ^</pattern>
+	    <template><srai><star/> SKILL <star index="2"/></srai></template>
+	</category>-->
+</aiml>

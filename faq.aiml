@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- questions about careers -->
+	<category>
+		<pattern><set>careers</set> DEFINITION</pattern>
+		<template>A <star/> <map name="careerdescriptions"><star/></map></template>
+	</category>
+	
+	<category>
+		<pattern>* DEFINITION</pattern>
+		<template>I'm not sure what <star/> is.</template>
+	</category>
+	
+	<category>
+		<pattern>WHAT DOES ^ <set>careers</set> ^ DO</pattern>
+		<template><srai><star index="2"/> DEFINITION</srai></template>
+	</category>
+	
+	<category>
+		<pattern>WHAT IS ^ <set>careers</set></pattern>
+		<template><srai><star index="2"/> DEFINITION</srai></template>
+	</category>
+	
+	<category>
+		<pattern>WHAT ^ RESPONSIBILITIES ^ <set>careers</set> ^</pattern>
+		<template><srai><star index="3"/> DEFINITION</srai></template>
+	</category>
+	
+	<!-- quesitons about salaries -->
+	<category>
+		<pattern>SALARY <set>careers</set></pattern>
+		<template>The average annual salary of a <star/> early in their career
+		is <map name="salaries"><star/></map></template>
+	</category>
+	
+	<category>
+		<pattern>HOW MUCH ^ <set>careers</set> ^</pattern>
+		<template><srai>SALARY <star index="2"/></srai></template>
+	</category>
+	
+	<category>
+		<pattern>WHAT IS ^ SALARY ^ <set>careers</set> ^</pattern>
+		<template><srai>SALARY <star index="3"/></srai></template>
+	</category>
+	
+	<!--<category>
+		<pattern>WHAT IS ^ INCOME ^ <set>careers</set> ^</pattern>
+		<template><srai>SALARY <star index="3"/></srai></template>
+	</category>-->
+	
+	<!-- questoins about skills -->
+	<category>
+	    <pattern>PROMPT NEXT SKILL</pattern>
+	    <template>Would you like me to explain another skill?</template>
+	</category>
+	
+	<category>
+	    <pattern>^ YES ^</pattern>
+	    <that>Would you like me to explain another skill</that>
+	    <template><srai>PROMPT SKILL</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>^ NO ^</pattern>
+	    <that>Would you like me to explain another skill</that>
+	    <template><srai>PREFACE QUESTIONNAIRE</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>PROMPT SKILL</pattern>
+	    <template>Which skill would you like me to explain?</template>
+	</category>
+	
+	<category>
+	    <pattern><set>skills</set> ^</pattern>
+	    <that>Which skill would you like me to explain</that>
+	    <template><star/> is <map name="skilldefinitions"><star/></map>.
+	    <br/>
+	    <srai>PROMPT NEXT SKILL</srai></template>
+	</category>
+	
+	<category>
+	    <pattern><set>skills</set> AND <set>skills</set> ^</pattern>
+	    <that>Which skill would you like me to explain</that>
+	    <template><star/> is <map name="skilldefinitions"><star/></map> and  
+	    <star index="2"/> is <map name="skilldefinitions"><star index="2"/></map>.
+	    <br/>
+	    <srai>PROMPT NEXT SKILL</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>DEFINE HARD SKILL</pattern>
+	    <template>A hard skill, such as coding in Java, is a specific and 
+	    measurable capability applicable to more specialized tasks.</template>
+	</category>
+	
+	<category>
+	    <pattern>WHAT * HARD SKILL</pattern>
+	    <template><srai>DEFINE HARD SKILL</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>WHAT * HARD SKILLS</pattern>
+	    <template><srai>DEFINE HARD SKILL</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>DEFINE SOFT SKILL</pattern>
+	    <template>A soft skill, such as communition, is a capability pertenent 
+	    to most professions.</template>
+	</category>
+	
+	<category>
+	    <pattern>WHAT * SOFT SKILL</pattern>
+	    <template><srai>DEFINE SOFT SKILL</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>WHAT * SOFT SKILLS</pattern>
+	    <template><srai>DEFINE SOFT SKILL</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>DEFINE HARD SOFT DIFFERENCE</pattern>
+	    <template>Hard skills, such as coding in Java, are specific and 
+	    measurable capabilities applicable to more specialized tasks 
+	    whereas soft skills, such as communition, are capabilities pertenent 
+	    to most professions.</template>
+	</category>
+	
+	<category>
+	    <pattern>WHAT * DIFFERENCE BETWEEN HARD _ SOFT *</pattern>
+	    <template><srai>DEFINE HARD SOFT DIFFERENCE</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>WHAT * DIFFERENCE BETWEEN SOFT _ HARD *</pattern>
+	    <template><srai>DEFINE HARD SOFT DIFFERENCE</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>WHAT * DIFFERENCES BETWEEN HARD _ SOFT *</pattern>
+	    <template><srai>DEFINE HARD SOFT DIFFERENCE</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>WHAT * DIFFERENCES BETWEEN SOFT _ HARD *</pattern>
+	    <template><srai>DEFINE HARD SOFT DIFFERENCE</srai></template>
+	</category>
+</aiml>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <!-- UDC -->
+    <category>
+        <pattern>*</pattern>
+        <template>I'm not sure how to respond to that.</template>
+    </category>
+    
+    <!-- GREETINGS -->
+	<category>
+        <pattern>GREETING</pattern>
+        <template>
+            <random>
+                <li>Hello!</li>
+                <li>Welcome!</li>
+                <li>Hi!</li>
+            </random> Are you here for Computer Science career counseling?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>GOODBYE</pattern>
+        <template>
+            <random>
+                <li>Goodbye! </li>
+                <li>Bye bye! </li>
+                <li>Bye! </li>
+            </random>
+            Thank you for chatting.
+        </template>
+    </category>
+	    
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>ARE YOU HERE FOR COMPUTER SCIENCE CAREER COUNSELING</that>
+        <template><srai>CONFIRM COUNSELING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>INDEED</pattern>
+        <that>ARE YOU HERE FOR COMPUTER SCIENCE CAREER COUNSELING</that>
+        <template><srai>CONFIRM COUNSELING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>I AM</pattern>
+        <that>ARE YOU HERE FOR COMPUTER SCIENCE CAREER COUNSELING</that>
+        <template><srai>CONFIRM COUNSELING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ YEAH ^</pattern>
+        <that>ARE YOU HERE FOR COMPUTER SCIENCE CAREER COUNSELING</that>
+        <template><srai>CONFIRM COUNSELING</srai></template>
+    </category>
+	    
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>ARE YOU HERE FOR COMPUTER SCIENCE CAREER COUNSELING</that>
+        <template>Ok, have a nice day!</template>
+    </category>
+	
+	<!-- COUNSELING -->
+	<category>
+        <pattern>CONFIRM COUNSELING</pattern>
+        <template>Perfect! Let's get started.
+        <br/><br/>
+        <srai>PROMPT OPTIONS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>PROMPT OPTIONS</pattern>
+        <template>
+            <srai>PROMPT OPTION ONE</srai>
+            <br/><br/>
+            <srai>PROMPT OPTION TWO</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>PROMPT OPTION ONE</pattern>
+        <template>Would you like me to provide examples of some Computer 
+        Science careers?</template>
+    </category>
+    
+    <category>
+        <pattern>PROMPT OPTION TWO</pattern>
+        <template>Alternatively, I can ask you some questions about your 
+        strengths and interests and suggest a career you might be interest in 
+        exploring.</template>
+    </category>
+    
+    <category>
+        <pattern>OK</pattern>
+        <that>Alternatively I can ask you some questions about your 
+        strengths and interests and suggest a career you might be interest in 
+        exploring</that>
+        <template>Which one? Examples or the questionnaire?</template>
+    </category>
+    
+    <category>
+        <pattern>SURE</pattern>
+        <that>Alternatively I can ask you some questions about your 
+        strengths and interests and suggest a career you might be interest in 
+        exploring</that>
+        <template>Which one? Examples or the questionnaire?</template>
+    </category>
+    
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>Alternatively I can ask you some questions about your 
+        strengths and interests and suggest a career you might be interest in 
+        exploring</that>
+        <template>Which one? Examples or the questionnaire?</template>
+    </category>
+    
+    <category>
+        <pattern>EXAMPLES ^</pattern>
+        <that>Alternatively I can ask you some questions about your 
+        strengths and interests and suggest a career you might be interest in 
+        exploring</that>
+        <template>Some examples of Computer Science professions are<br/>
+        <ul>
+            <li>Hardware Engineer</li>
+            <li>IT Architect</li>
+            <li>Secutiry Analyst</li>
+            <li>Software Engineer</li>
+            <li>Video Game Designer</li>
+        </ul></template>
+    </category>
+	
+	<category>
+        <pattern>PREFACE QUESTIONNAIRE</pattern>
+        <template>Ok, let's start with some questions about hard skills. <think><set name="topic">questionnaire</set></think><br/>
+		<srai>HARD SKILL QUESTIONNAIRE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ questions ^</pattern>
+        <template><srai>PREFACE QUESTIONNAIRE</srai></template>
+    </category>
+    
+    <!--<categroy>
+        <pattern>^ YOU ASK ^ QUESTIONS</pattern>
+        <that>Alternatively I can ask you some questions about your 
+        strengths and interests and suggest a career you might be interest in 
+        exploring</that>
+        <template><srai>PREFACE QUESTIONNAIRE</srai></template>
+    </categroy>-->
+    
+    <!--<categroy>
+        <pattern>* QUESTIONS</pattern>
+        <that>Alternatively I can ask you some questions about your 
+        strengths and interests and suggest a career you might be interest in 
+        exploring</that>
+        <template><srai>PREFACE QUESTIONNAIRE</srai></template>
+    </categroy>
+    
+    <categroy>
+        <pattern>QUESTIONS ^</pattern>
+        <that>Alternatively I can ask you some questions about your 
+        strengths and interests and suggest a career you might be interest in 
+        exploring</that>
+        <template><srai>PREFACE QUESTIONNAIRE</srai></template>
+    </categroy>-->
+    
+    <!--<category>
+        <pattern>USER QUESTIONS</pattern>
+        <template><srai>AFFIRMATION</srai>, 
+        <random>
+            <li> what would you like to know?</li>
+            <li> what is your question?</li>
+            <li> ask away.</li>
+        </random></template>
+    </category>
+    
+    <category>
+        <pattern>^ I HAVE ^ QUESTION ^</pattern>
+        <template><srai>USER QUESTIONS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ I HAVE ^ QUESTIONS ^</pattern>
+        <template><srai>USER QUESTIONS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ I ASK _ QUESTION ^</pattern>
+        <template><srai>USER QUESTIONS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>^ I ASK _ QUESTIONS ^</pattern>
+        <template><srai>USER QUESTIONS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>PROMPT ADDITIONAL QUESTIONS</pattern>
+        <templates>Do you have any more questions?</templates>
+    </category>
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>DO YOU HAVE ANY MORE QUESTIONS</that>
+        <template><srai>AFFIRMATION</srai>, 
+        <random>
+            <li>what would you like to know?</li>
+            <li>what is your question?</li>
+            <li>ask away.</li>
+        </random></template>
+    </category>
+    
+    <category>
+        <pattern>NO</pattern>
+        <that>DO YOU HAVE ANY MORE QUESTIONS</that>
+        <template><srai>AFFIRMATION</srai>. <srai>PROMPT OPTIONS</srai></template>
+    </category>-->
+    
+    <category>
+        <pattern>WHAT IS THE MEANING OF LIFE ^</pattern>
+        <template>42</template>
+    </category>
+</aiml>

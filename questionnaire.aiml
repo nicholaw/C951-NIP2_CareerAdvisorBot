@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- Ask about hard skills -->
+	<category>
+		<pattern>HARD SKILL QUESTIONNAIRE</pattern>
+		<template>Among the following hard skills, which do you think is 
+		your strongest?<br/>
+			<ul>
+				<li>Programming Languages</li>
+				<li>Management</li>
+				<li>Engineering and Electronics</li>
+			</ul>
+		</template>
+	</category>
+	
+	<!--<topic name="questionnaire">-->
+	<!-- PROGRAMMING LANGUAGES branch -->
+	<category>
+		<pattern>PROGRAMMING LANGUAGES</pattern>
+		<that>LT UL GT LT LI GT PROGRAMMING LANGUAGES LT SLASH LI GT LT LI GT MANAGEMENT LT SLASH LI GT LT LI GT ENGINEERING AND ELECTRONICS LT SLASH LI GT LT SLASH UL GT</that>
+		<template>Alright. Now among the following pairs soft skills, which do you 
+		think is your strongest?<br/>
+			<ul>
+				<li>Teamwork and Creativity</li><!-- Video Game Developer -->
+				<li>Creativity and Mathematics</li><!-- Hardware Engineer -->
+				<li>Organization and Multitasking</li><!-- Software Engineer -->
+			</ul>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>PROGRAMMING</pattern>
+		<that>LT UL GT LT LI GT PROGRAMMING LANGUAGES LT SLASH LI GT LT LI GT MANAGEMENT LT SLASH LI GT LT LI GT ENGINEERING AND ELECTRONICS LT SLASH LI GT LT SLASH UL GT</that>
+		<template><srai>PROGRAMMING LANGUAGES</srai></template>
+	</category>
+	
+	<category>
+		<pattern>LANGUAGES</pattern>
+		<that>LT UL GT LT LI GT PROGRAMMING LANGUAGES LT SLASH LI GT LT LI GT MANAGEMENT LT SLASH LI GT LT LI GT ENGINEERING AND ELECTRONICS LT SLASH LI GT LT SLASH UL GT</that>
+		<template><srai>PROGRAMMING LANGUAGES</srai></template>
+	</category>
+	
+	<category>
+		<pattern>CODING</pattern>
+		<that>LT UL GT LT LI GT PROGRAMMING LANGUAGES LT SLASH LI GT LT LI GT MANAGEMENT LT SLASH LI GT LT LI GT ENGINEERING AND ELECTRONICS LT SLASH LI GT LT SLASH UL GT</that>
+		<template><srai>PROGRAMMING LANGUAGES</srai></template>
+	</category>
+	
+		<!-- programming languages->teamwork and creativity -->
+		<category>
+			<pattern>TEAMWORK AND CREATIVITY</pattern>
+			<that>LT UL GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ORGANIZATION AND MULTITASKING LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Video Game Designer!</template>
+		</category>
+		
+		<category>
+			<pattern>TEAMWORKY</pattern>
+			<that>LT UL GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ORGANIZATION AND MULTITASKING LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Video Game Designer!</template>
+		</category>
+		
+		<category>
+		    <pattern>CREATIVITY</pattern>
+		    <that>LT UL GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ORGANIZATION AND MULTITASKING LT SLASH LI GT LT SLASH UL GT</that>
+		    <template>Ok. Between teamwork and problem solving, which would you consider to be your stronger skill?</template>
+		</category>
+		
+		<category>
+		    <pattern>TEAMWORK</pattern>
+		    <that>Between teamwork and problem solving which would you consider to be your stronger skill</that>
+		    <template>You should consider Video Game Designer!</template>
+		</category>
+		
+		<category>
+		    <pattern>PROBLEM SOLVING</pattern>
+		    <that>Between teamwork and problem solving which would you consider to be your stronger skill</that>
+		    <template>You should consider Hardware Engineer or Video Game Designer!</template>
+		</category>
+		
+		<category>
+		    <pattern>PROBLEMS</pattern>
+		    <that>Between teamwork and problem solving which would you consider to be your stronger skill</that>
+		    <template>You should consider Hardware Engineer or Video Game Developer!</template>
+		</category>
+		
+		<category>
+		    <pattern>SOLVING</pattern>
+		    <that>Between teamwork and problem solving which would you consider to be your stronger skill</that>
+		    <template>You should consider Hardware Engineer or Video Game Designer!</template>
+		</category>
+		
+		<!-- programming languages->creativity and mathematics -->
+		<category>
+			<pattern>CREATIVITY AND MATHEMATICS</pattern>
+			<that>LT UL GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ORGANIZATION AND MULTITASKING LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Hardware Engineer or Video Game Designer!</template>
+		</category>
+		
+		<category>
+			<pattern>MATHEMATICS</pattern>
+			<that>LT UL GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ORGANIZATION AND MULTITASKING LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Hardware Engineer (or Video Game Designer)!</template>
+		</category>
+		
+		<!-- programming languages->management and multitasking -->
+		<category>
+			<pattern>ORGANIZATION AND MULTITASKING</pattern>
+			<that>LT UL GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ORGANIZATION AND MULTITASKING LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Software Engineer!</template>
+		</category>
+		
+		<category>
+			<pattern>ORGANIZATION</pattern>
+			<that>LT UL GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ORGANIZATION AND MULTITASKING LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Software Engineer!</template>
+		</category>
+		
+		<category>
+			<pattern>MULTITASKING</pattern>
+			<that>LT UL GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ORGANIZATION AND MULTITASKING LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Software Engineer!</template>
+		</category>
+		
+	<!-- MANAGEMENT branch -->
+	<category>
+		<pattern>MANAGEMENT</pattern>
+		<that>LT UL GT LT LI GT PROGRAMMING LANGUAGES LT SLASH LI GT LT LI GT MANAGEMENT LT SLASH LI GT LT LI GT ENGINEERING AND ELECTRONICS LT SLASH LI GT LT SLASH UL GT</that>
+		<template>Alright. Now among the following pairs soft skills, which do you 
+		think is your strongest?<br/>
+			<ul>
+				<li>Problem Solving and Attention to Detail</li><!-- Security Analyst -->
+				<li>Organization and Problem Solving</li><!-- IT Architect -->
+				<li>Teamwork and Creativity</li><!-- Video Game Designer -->
+			</ul>
+		</template>
+	</category>
+	
+		<!-- management->problem solving and attention to detail'-->
+		<category>
+			<pattern>PROBLEM SOLVING AND ATTENTION TO DETAIL</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Security Analyst!</template>
+		</category>
+		
+		<category>
+			<pattern>ATTENTION TO DETAIL</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Security Analyst!</template>
+		</category>
+		
+		<category>
+			<pattern>ATTENTION</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Security Analyst!</template>
+		</category>
+		
+		<category>
+			<pattern>DETAILS</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Security Analyst!</template>
+		</category>
+		
+		<!-- management->organization and problem solving -->
+		<category>
+			<pattern>ORGANIZATION AND PROBLEM SOLVING</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider IT Architect!</template>
+		</category>
+		
+		<category>
+			<pattern>ORGANIZATION</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider IT Architect!</template>
+		</category>
+		
+		<category>
+			<pattern>PROBLEM SOLVING</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider IT Architect!</template>
+		</category>
+		
+		<category>
+			<pattern>SOLVING PROBLEMS</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider IT Architect!</template>
+		</category>
+		
+		<category>
+			<pattern>PROBLEMS</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider IT Architect!</template>
+		</category>
+		
+		<category>
+			<pattern>SOLVING</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider IT Architect!</template>
+		</category>
+		
+		<!-- management->teamwork and creativity -->
+		<category>
+			<pattern>TEAMWORK AND CREATIVITY</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Video Game Designer or Software Engineer!</template>
+		</category>
+		
+		<category>
+			<pattern>TEAMWORK</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Video Game Designer or Software Engineer!</template>
+		</category>
+		
+		<category>
+			<pattern>CREATIVITY</pattern>
+			<that>LT UL GT LT LI GT PROBLEM SOLVING AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND PROBLEM SOLVING LT SLASH LI GT LT LI GT TEAMWORK AND CREATIVITY LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Video Game Designer or Software Engineer!</template>
+		</category>
+	
+	<!-- ENGINEERING AND ELECTRONICS branch -->
+	<category>
+		<pattern>ENGINEERING AND ELECTRONICS</pattern>
+		<that>LT UL GT LT LI GT PROGRAMMING LANGUAGES LT SLASH LI GT LT LI GT MANAGEMENT LT SLASH LI GT LT LI GT ENGINEERING AND ELECTRONICS LT SLASH LI GT LT SLASH UL GT</that>
+		<template>Alright. Now among the following pairs soft skills, which do you 
+		think is your strongest?<br/>
+			<ul>
+				<li>Creativity and Mathematics</li><!-- Hardware Engineer -->
+				<li>Analysis and Attention to Detail</li><!-- Security Analyst -->
+				<li>Organization and Communication</li><!-- IT Architect -->
+			</ul>
+		</template>
+	</category>
+	
+	<category>
+	    <pattern>ENGINEERING</pattern>
+	    <that>LT UL GT LT LI GT PROGRAMMING LANGUAGES LT SLASH LI GT LT LI GT MANAGEMENT LT SLASH LI GT LT LI GT ENGINEERING AND ELECTRONICS LT SLASH LI GT LT SLASH UL GT</that>
+	    <template><srai>ENGINEERING AND ELECTRONICS</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>ELECTONICS</pattern>
+	    <that>LT UL GT LT LI GT PROGRAMMING LANGUAGES LT SLASH LI GT LT LI GT MANAGEMENT LT SLASH LI GT LT LI GT ENGINEERING AND ELECTRONICS LT SLASH LI GT LT SLASH UL GT</that>
+	    <template><srai>ENGINEERING AND ELECTRONICS</srai></template>
+	</category>
+	
+		<!-- engineering->creativity and mathematics -->
+		<category>
+			<pattern>CREATIVITY AND MATHEMATICS</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Hardware Engineer!</template>
+		</category>
+		
+		<category>
+			<pattern>CREATIVITY</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Hardware Engineer!</template>
+		</category>
+		
+		<category>
+			<pattern>MATHEMATICS</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Hardware Engineer!</template>
+		</category>
+		
+		<category>
+			<pattern>MATH</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Hardware Engineer!</template>
+		</category>
+		
+		<!-- engineering->analysis and attention to details -->
+		<category>
+			<pattern>ANALYSIS AND ATTENTION TO DETAIL</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Security Analyst!</template>
+		</category>
+		
+		<category>
+			<pattern>ANALYSIS</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Security Analyst!</template>
+		</category>
+		
+		<category>
+			<pattern>ATTENTION TO DETAIL</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Security Analyst!</template>
+		</category>
+		
+		<category>
+			<pattern>ATTENTION</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Security Analyst!</template>
+		</category>
+		
+		<category>
+			<pattern>DETAILS</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider Security Analyst!</template>
+		</category>
+		
+		<!-- engineering->organization and communication -->
+		<category>
+			<pattern>ORGANIZATION AND COMMUNICATION</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider IT Architect!</template>
+		</category>
+		
+		<category>
+			<pattern>ORGANIZATION</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider IT Architect!</template>
+		</category>
+		
+		<category>
+			<pattern>COMMUNICATION</pattern>
+			<that>LT UL GT LT LI GT CREATIVITY AND MATHEMATICS LT SLASH LI GT LT LI GT ANALYSIS AND ATTENTION TO DETAIL LT SLASH LI GT LT LI GT ORGANIZATION AND COMMUNICATION LT SLASH LI GT LT SLASH UL GT</that>
+			<template>You should consider IT Architect!</template>
+		</category>
+	
+	<!-- It would be great if I could figure out how to get the topic tag to work here -->
+	<category>
+	    <pattern>I ^ DO NOT KNOW</pattern>
+	    <template>Would you like me to explain some of the skills?</template>
+	</category>
+	
+	<category>
+	    <pattern>I AM NOT SURE</pattern>
+	    <template>Would you like me to explain some of the skills?</template>
+	</category>
+	
+	<category>
+	    <pattern>^ YES ^</pattern>
+	    <that>Would you like me to explain some of the skills</that>
+	    <template><srai>PROMPT SKILL</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>^ NO ^</pattern>
+	    <that>Would you like me to explain some of the skills</that>
+	    <template>Ok, would you like me to just list some examples of career in Computer Science?</template>
+	</category>
+	
+	<category>
+	    <pattern>^ YES ^</pattern>
+	    <that>Ok would you like me to just list some examples of career in Computer Science</that>
+	    <template><srai>EXAMPLES</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>^ NO ^</pattern>
+	    <that>Ok would you like me to just list some examples of career in Computer Science</that>
+	    <template>Ok, have a nice day!</template>
+	</category>
+	
+	<!--</topic>-->
+</aiml>
